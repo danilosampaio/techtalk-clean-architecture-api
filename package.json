@@ -1,0 +1,64 @@
+{
+  "name": "clean-architecture-api",
+  "version": "1.0.0",
+  "description": "Projeto criado na TechTalk sobre Clean Architecture com Node.js",
+  "main": "src/main.ts",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig-build.json && tsc-alias -p tsconfig.json",
+    "dev": "tsnd --debug --respawn --transpile-only -r tsconfig-paths/register dotenv/config --inspect=0.0.0.0:7001 src/main.ts",
+    "start": "node -r dotenv/config dist/main.js",
+    "lint": "eslint",
+    "test": "jest --setupFiles dotenv/config --coverage=true --runInBand __tests__/unit/*",
+    "test:integration": "jest --setupFiles dotenv/config --coverage=true --runInBand __tests__/integration/*",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "REST",
+    "API"
+  ],
+  "author": {
+    "name": "Danilo Sampaio",
+    "email": "jose.sampaio@venturus.org.br",
+    "url": "https://github.com/danilosampaio"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6",
+    "typeorm": "^0.2.40",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.7",
+    "@types/swagger-jsdoc": "^6.0.1",
+    "@types/swagger-ui-express": "^4.1.3",
+    "@types/uuid": "^8.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "tsc-alias": "^1.4.0",
+    "typescript": "^4.4.4"
+  }
+}

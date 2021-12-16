@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "ES2017",
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": "src",
+        "paths": {
+            "*": ["node_modules/*"],
+            "@/tests/*": ["../__tests__/*"],
+            "@/*": ["*"]
+        },
+        "rootDirs": ["src", "__tests__"],
+    },
+    "include": ["src/**/*", "__tests__/**/*.test.ts"]
+}

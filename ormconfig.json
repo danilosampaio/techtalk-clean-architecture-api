@@ -1,0 +1,20 @@
+{
+    "type": "postgresql",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "123456",
+    "database": "vntseed",
+    "synchronize": true,
+    "logging": true,
+    "keepConnectionAlive": true,
+    "entities": [
+       "src/infra/database/sql/entities/**/*.ts"
+    ],
+    "migrations": [
+       "src/infra/database/sql/migration/**/*.ts"
+    ],
+    "subscribers": [
+       "src/infra/database/sql/subscriber/**/*.ts"
+    ]
+ }
