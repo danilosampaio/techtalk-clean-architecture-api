@@ -2,8 +2,8 @@ import "reflect-metadata";
 import { Connection, createConnection } from 'typeorm';
 import { v4 as uuidv4 } from 'uuid';
 
+import User from "@/infra/repositories/postgresql/entities/User";
 import IUserRepository from "@/domain/repositories/IUserRepository";
-import User from "./entities/User";
 
 export default class UserRepositoryPostgresql implements IUserRepository {
     static connection: Connection;

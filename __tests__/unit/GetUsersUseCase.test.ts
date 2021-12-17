@@ -9,8 +9,8 @@ beforeAll(() => {
     getUsersUseCase = new GetUsersUseCase(userRepositoryMemory);
 });
 
-describe('CreateUserUseCase', () => {
-    test('should create a new user', async () => {
+describe('GetUsersUseCase - memory', () => {
+    test('should users from repository', async () => {
         const users = await getUsersUseCase.execute();
         expect(users).toEqual([]);
     });

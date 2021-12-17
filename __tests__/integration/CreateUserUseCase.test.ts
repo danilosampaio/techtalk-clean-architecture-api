@@ -19,7 +19,7 @@ afterAll(async () => {
     await userRepositoryPostgresql.disconnect();
 })
 
-describe('CreateUserUseCase', () => {
+describe('CreateUserUseCase - integration', () => {
     test('should create a new user', async () => {
         const newUser = await createUserUseCase.execute('danilo', 'danilo@test', '123456');
         expect(newUser.name).toBe('danilo');

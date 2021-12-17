@@ -1,6 +1,6 @@
-import UserController from '@/controllers/UserController';
 import express from 'express';
-import { userRoutes } from './routes/user.routes';
+import { userRoutes } from '@/infra/http/express/routes/user.routes';
+import UserController from '@/controllers/UserController';
 
 export default class ExpressApp {
     static start(userController: UserController) {

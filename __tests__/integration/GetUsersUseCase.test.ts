@@ -19,8 +19,8 @@ afterAll(async () => {
     await userRepositoryPostgresql.disconnect();
 })
 
-describe('CreateUserUseCase', () => {
-    test('should create a new user', async () => {
+describe('GetUsersUseCase - integration', () => {
+    test('should return users from repository', async () => {
         const users = await getUsersUseCase.execute();
         expect(users).toEqual([]);
     });

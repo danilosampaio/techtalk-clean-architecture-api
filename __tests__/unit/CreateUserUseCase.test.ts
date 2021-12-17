@@ -9,7 +9,7 @@ beforeAll(() => {
     createUserUseCase = new CreateUserUseCase(userRepositoryMemory);
 });
 
-describe('CreateUserUseCase', () => {
+describe('CreateUserUseCase - memory', () => {
     test('should create a new user', async () => {
         const newUser = await createUserUseCase.execute('danilo', 'danilo@test', '123456');
         expect(newUser.name).toBe('danilo');
