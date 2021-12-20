@@ -1,6 +1,8 @@
 # Clean Architecture Node.js API
 > Projeto criado na TechTalk - Clean Architecture com Node.js
 
+![Build & Test](https://github.com/danilosampaio/techtalk-clean-architecture-api/actions/workflows/node.js.yml/badge.svg)
+
 ## Requisitos
 
 ### Requisitos Funcionais
