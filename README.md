@@ -2,6 +2,7 @@
 > Projeto criado na TechTalk - Clean Architecture com Node.js
 
 ![Build & Test](https://github.com/danilosampaio/techtalk-clean-architecture-api/actions/workflows/node.js.yml/badge.svg)
+[![codecov](https://codecov.io/gh/danilosampaio/techtalk-clean-architecture-api/branch/main/graph/badge.svg?token=9HIJK9B435)](https://codecov.io/gh/danilosampaio/techtalk-clean-architecture-api)
 
 ## Requisitos
 
