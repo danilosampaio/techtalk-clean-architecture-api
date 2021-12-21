@@ -1,2 +1,5 @@
 - name: Upload coverage to Codecov
     uses: codecov/codecov-action@v2
+    with:
+      token: 7ff9b166-e10d-4b4d-b860-a8f5e24b0c30
+      flags: unittests
