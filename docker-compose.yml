@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+
+  api:
+    build: ./
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/dist
+
+  pg_database:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: clean_architecture_api
+    ports:
+      - "5432:5432"

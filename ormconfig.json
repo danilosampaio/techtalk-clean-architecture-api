@@ -1,20 +1,23 @@
 {
-    "type": "postgresql",
+    "type": "postgres",
     "host": "localhost",
     "port": 5432,
     "username": "postgres",
-    "password": "123456",
-    "database": "vntseed",
+    "password": "postgres",
+    "database": "clean_architecture_api",
     "synchronize": true,
     "logging": true,
     "keepConnectionAlive": true,
     "entities": [
-       "src/infra/database/sql/entities/**/*.ts"
+       "src/infra/repositories/postgresql/entities/**/*.ts"
     ],
     "migrations": [
-       "src/infra/database/sql/migration/**/*.ts"
+       "src/infra/repositories/postgresql/migrations/**/*.ts"
     ],
     "subscribers": [
-       "src/infra/database/sql/subscriber/**/*.ts"
-    ]
+       "src/infra/repositories/postgresql/subscriber/**/*.ts"
+    ],
+    "cli": {
+       "migrationsDir": "migrations"
+    }
  }

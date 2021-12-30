@@ -26,6 +26,26 @@ estrutura da aplicação segue os padrões da [Clean Architecture](https://blog.
 
 ![Arquitetura](assets/API_Architecture.png)
 
+## Run
+
+Run application using docker (up database and api containers):
+
+```sh
+npm start
+```
+
+Run application using ts-node-dev (you must have started the database before it):
+
+```sh
+npm run dev
+```
+
+Start only the database container:
+
+```sh
+docker-compose up -d pg_database
+```
+
 ## Stack
 
 ### Geral
@@ -48,6 +68,9 @@ o ORM utilizado na camada de dados é o `TypeORM`.
 
 ### CI/CD
 > [Integração Contínua](https://www.atlassian.com/br/continuous-delivery/continuous-integration)
+
+- __Docker:__
+A aplicação Node.js and o banco de dados rodam dentro de container `Docker`.
 
 - __ESlint:__
 para análise de código (Linting), usando como base o preset `airbnb`.
