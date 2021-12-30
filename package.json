@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig-build.json && tsc-alias -p tsconfig.json",
-    "dev": "tsnd --debug --respawn --transpile-only -r tsconfig-paths/register dotenv/config --inspect=0.0.0.0:7001 src/main.ts dotenv_config_path=./.dev.env",
+    "dev": "tsnd --respawn --transpile-only --inspect=0.0.0.0:7001 -r tsconfig-paths/register -r dotenv/config src/main.ts src/main.ts dotenv_config_path=./.dev.env",
     "start": "node -r dotenv/config dist/main.js",
     "up": "docker-compose up -d",
     "lint": "eslint",
